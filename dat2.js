@@ -253,11 +253,37 @@ let mulitplypriceby2 = [
 
 // q8. Get even numbers and multiply them by 2 
 
-let e = [1, 2, 3, 4, 5, 6]
-console.log(e.filter(e=> e % 2 === 0));
-console.log(e.map(e=> e * 2));
+// let e = [1, 2, 3, 4, 5, 6]
+// console.log(e.filter(e=> e % 2 === 0));
+// console.log(e.map(e=> e * 2));
+
+// let numbers = [100, 250, 400, 50];
+
+// console.log(numbers.find(numbers=> numbers<200));
 
 
+// // bro i tried but i didn't solve it sorrybro
+// const a = [1, 2, 3, 4, 5,]
 
-// bro i tried but i didn't solve it sorrybro
+// const red = (a, b)=>{
+//     return a + b
+// }
+// console.log(a.reduce(red));
+
+
+// ==========================================
+
+// arrays are Complted
+
+// question set by codewithharry\
+
+// 1.
+// let num = [1, 2, 3, 4, 5, 6]
+// let users = []
+
+// let inp = users.push(num);
+//  console.log(inp);
+//  console.log(users);
+ 
+
 

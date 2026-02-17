@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event bubbling</title>
+
+    <style>
+      .child {
+        margin: 45px;
+        padding: 45px;
+        border: 2px solid black;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .child-container {
+        margin: 45px;
+        padding: 45px;
+        border: 2px solid darkblue;
+        background-color: white;
+      }
+
+      .container {
+        margin: 45px;
+        padding: 45px;
+        border: 2px solid darkblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="child-container">
+        <div class="child">Hii child</div>
+      </div>
+    </div>
+
+    <script>
+      // let clickbutton = document.getElementById("btn");
+
+      // clickbutton.addEventListener("dblclick" , ()=>{
+      //     document.querySelector(".div").innerHTML = "hey all" // double click right
+      // })
+
+      // clickbutton.addEventListener("contextmenu" , ()=>{
+      //     document.querySelector(".div").innerHTML = "hey all" // right click
+      // })
+
+      // clickbutton.addEventListener("keydown" , ()=>{
+      //     document.querySelector(".div").innerHTML = "hey all"
+      // })
+
+      // clickbutton.addEventListener("mouseover" , ()=>{
+      //     document.querySelector(".div").innerHTML = "hey all" // hovermouse
+      // })
+
+      // event bubbling
+      let beta = document.querySelector(".child");
+      beta.addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("child was click");
+      });
+
+      let chotabeta = document.querySelector(".child-container");
+      chotabeta.addEventListener("click", (e) => {
+        //e.stopPropagation();
+        alert("child container was click");
+      });
+
+      let barabeta = document.querySelector(".container");
+      barabeta.addEventListener("click", () => {
+        alert("container was click");
+      });
+
+
+      // setinterval
+
+      // let id = setInterval(() => {
+      //   console.log("Run again and again");  this will run many times,
+
+      // },2000);
+      // // clearInterval(id);
+
+      // ===================================== 
+  
+      // settimeout
+
+      // let id = setTimeout (()=>{
+      // console.log("run after and after");  this run only one time
+    
+      // }, 2000)
+
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <button id="btn">click me</button>
+    </div>
+
+    <script>
+       function add (addtext, later){
+        let cre =  document.getElementById("btn");
+        cre.innerText = "this button changed using call back functionn first"
+         
+        setTimeout (()=>{
+            later();
+        },2000)
+    }
+
+
+
+       function now () {
+         let cre =  document.getElementById("btn");
+        cre.innerText = "this button changed using call back functionn second"
+   
+
+        
+       }
+
+       add("Piyush", now)
+   
+    </script>
+</body>
+</html>
